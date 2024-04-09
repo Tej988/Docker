@@ -1,0 +1,16 @@
+services:
+  web:
+    build: 
+      context: ./javaapp
+      dockerfile: Dockerfile
+    container_name: javaapp
+    ports:
+      - "8080:8080"
+
+  db:
+    image: 
+      context: ./mysql
+      dockerfile: Dockerfile
+    container_name: mysql
+    ports:
+      - "3306:3306"
